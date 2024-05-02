@@ -29,7 +29,7 @@ def check_duplicates(df, columns):
 
     # Get samples dataframe
     samples_df = df[duplicates].groupby(columns).size().reset_index(name='number_of_duplicates')
-    # Print count and samples in the same line
+    # Print count and samples
     print("Duplicate Count:", duplicate_count, "Samples DataFrame:")
     print(samples_df)
     return {'count': duplicate_count, 'samples': samples_df}
